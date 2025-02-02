@@ -1,3 +1,14 @@
+# sorting using python built-in methods
+def sorting(array, option):
+    if option == 'asc':
+        return sorted(array)
+    elif option == 'desc':
+        return sorted(array, reverse=True)
+    else:
+        return array
+
+
+# sorting using bubble sort
 def bubble_sort(array, option):
     option = option.lower()
 
@@ -31,3 +42,4 @@ input_sort = input('Enter the sorting options out of (asc,desc,none): ')
 input_numbers = [int(num) for num in input_numbers.split(' ')]
 
 print(f'The sorted list based on {input_sort} is: {bubble_sort(input_numbers, input_sort)}')
+print(f'The sorted list based on {input_sort} is: {sorting(input_numbers, input_sort)}')
